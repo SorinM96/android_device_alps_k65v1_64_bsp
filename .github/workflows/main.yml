@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - name: Checkout Device Tree
       uses: actions/checkout@v3
@@ -19,10 +19,10 @@ jobs:
         sudo rm -rf /opt/ghc
         sudo docker image prune -a -f
 
-   - name: Install Build Tools
+    - name: Install Build Tools
       run: |
-        sudo apt update
-        sudo apt install -y git-core gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig python3
+        sudo apt sudo apt install -y git-core gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig python3update
+       
     - name: Install Repo Tool
       run: |
         mkdir -p ~/bin
